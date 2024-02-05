@@ -3,6 +3,9 @@ import {InfluxDBClient} from "@influxdata/influxdb3-client";
 
 export default function Home() {
   let influxDBClient = new InfluxDBClient("https://us-east-1-1.aws.cloud2.influxdata.com/?token=my-token&database=my-database");
+  // or use initialization by environment variables
+  // INFLUX_HOST and INFLUX_TOKEN
+  // let influxDBClient = new InfluxDBClient();
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
